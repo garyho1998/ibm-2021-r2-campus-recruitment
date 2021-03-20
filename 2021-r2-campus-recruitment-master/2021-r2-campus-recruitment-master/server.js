@@ -43,7 +43,7 @@ app.get("/membership", function (req, res) {
   var grade = req.query.grade;
   let sql = `SELECT * FROM membership`;
   let data = [];
-  if (grade === "DIAMOND" || grade === "GOLD" || grade === "Sliver") {
+  if (grade === "DIAMOND" || grade === "GOLD" || grade === "SILVER") {
     data = [grade];
     sql = `SELECT * FROM membership where grade = ?`;
   }
